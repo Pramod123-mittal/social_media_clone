@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class = container>
+<h1 class = 'py-2'> POST OF YOUR FOLLOWERS </h1>
+<form method = GET>
+<input value = "{{request.GET.si}}" type = "text" name = 'si'/>
+<input type = "submit"/>
+</form>
+<br>
+<a class = 'btn btn-primary' href = '/social/mypost/create'>create a new post</a>
+<div class = 'row'>
+{% for n1 in mypost_list %}
+
+<div class = 'col-md-4 my-3 h-150'>
+<div class="card text-center">
+  <img class="card-img-top" height="150" width="150"  src="{{n1.pic.url}}" alt="card image-cap">
+  <div class="card-body">
+    <h5 class="card-title">{{n1.subject}}</h5>
+    <p class="card-text">{{n1.cr_date | date:"d/m/y"}} 
+    <img class="rounded-circle" height="40" width="40"  src="{{n1.uploaded_by.profile_pic.url}}"></p>
+     {% if n1.liked %}
+      <a class = 'btn btn-danger btn-sm' href = '/social/mypost/unlike/{{n1.id}}'><span class = 'fa fa-thumbs-down'></span></a>
+     
+      {% else %}
+      <a class = 'btn btn-success btn-sm' href = '/social/mypost/like/{{n1.id}}'><span class = 'fa fa-thumbs-up'></span></a>
+
+      {% endif %}
+      {% if n1.likecount %}
+   <span class  = 'badge badge-info'>likes {{ n1.likecount }}</span>
+   {% endif %}
+    <a class = 'btn btn-primary' href = '/social/mypost/detail/{{n1.id}}'>  view </a>
+     </div>
+</div>
+</div>
+
+{% endfor %}
+</div>
+{% endblock %}

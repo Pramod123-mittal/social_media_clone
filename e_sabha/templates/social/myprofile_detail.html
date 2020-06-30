@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class = 'p-5'>
+<div class = 'row'>
+<div class = 'col-sm-6 offset-sm-3'>
+<h1><strong>NAME ::</strong>{{myprofile.name}}</h1>
+<p><strong>age ::</strong>{{myprofile.age}}</p>
+<p><strong>gender ::</strong>{{myprofile.gender}}</p>
+<p><strong>status ::</strong>{{myprofile.status}}</p>
+<p><strong>contact no ::</strong>{{myprofile.pno}}</p>
+<p><strong>discription ::</strong>{{myprofile.discription}}</p>
+<img class="thumbnail" src="{{myprofile.profile_pic.url}}" height="150" width="150">
+       
+</div>
+<div>
+</div>
+{% endblock content %}

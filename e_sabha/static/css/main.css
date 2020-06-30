@@ -1,0 +1,60 @@
+body{
+    background-color:floralwhite ;
+    font-size: 20px;
+}
+h1{
+    color:black;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: cursive;
+    text-shadow: 3px 3px 3px white;
+}
+
+#head_one{
+  height: 200px;
+
+}
+#headfix{
+    position: absolute;
+    top:130px;
+    width: 100%;
+    z-index: 10;
+    
+  }
+ .navbar-brand{
+    font-size: 40px;
+    font-family: cursive;
+    text-shadow: 3px 3px 3px white;
+    color: black;
+ } 
+ .navbar{
+    font-size: 30px;
+    font-family: cursive;
+    text-shadow: 3px 3px 3px white;
+    color: black;
+ }
+ .navbar-light .navbar-nav .nav-link {
+  color: black;
+  font-size: 20px;
+}
+#add{
+  font-size: 30px;
+  color: black;
+  font-family: cursive;
+  text-shadow: 3px 3px white;
+}
+#me{
+  font-style: normal;
+  font-family: initial;
+  font-size: 20px;
+  color: brown;
+  word-spacing: 1em;
+}
+.myfooter{
+  background-image: url('/static/images/banners.png');
+  font-size: 30px;
+  color: wheat;
+  font-family: cursive;
+  text-shadow: 3px 3px yellowgreen;
+  text-align: center;
+}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+
+<div class = 'container'>
+<h1 class = 'p-2'>Login Page</h1>
+<hr>
+<form method="post" enctype = 'multipart/form-data'>
+{% csrf_token %}
+{{form|crispy}}<br>
+<input class = 'btn btn-success' type="submit" />
+<a class = 'btn btn-primary' href = '/accounts/register/'>Register</a>
+<a class = 'btn btn-danger' href = '/accounts/password/reset/'>Forgot password?</a>
+</form>
+</div>
+{% endblock %}
+
+
+
